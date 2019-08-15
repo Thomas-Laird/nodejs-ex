@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Route
+metadata:
+  name: tlaird-nodejs-ex
+spec:
+  host: tlaird-nodejs-ex.lod.spotx.tv
+  path: "/"
+  to:
+    kind: Service
+    name: nodejs-example

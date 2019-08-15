@@ -1,3 +1,19 @@
+
+routes:
+  primaryInternalRoute:
+    name: api-route-app-spotx-tv
+    toName: spotx-web-api-http
+    distinctHost: true
+    annotations:
+      haproxy.router.openshift.io/timeout: 30m
+
+global:
+  domainName: lod.spotx.tv
+  realm: stage1.lod
+  redisHost: admin002.spotx
+  env: ""
+
+
 # Name: The name assigned to all of the frontend objects defined in this template.
 name: nodejs-example
 # Namespace: The OpenShift Namespace where the ImageStream resides.
